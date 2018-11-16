@@ -7,18 +7,17 @@ public class TasksLongs {
 
     private List <Long> getListOfLongs() {
         List<Long> longs = new ArrayList<Long>();
-        longs.add(1234L);
-        longs.add(1345L);
-        longs.add(345345L);
-        longs.add(154545L);
-        longs.add(345687L);
-        longs.add(346958L);
-        longs.add(234567L);
-        longs.add(213498L);
-        longs.add(2349875L);
-        longs.add(123856L);
-        longs.add(2340978L);
-        longs.add(12L);
+        longs.add(1251L);
+        longs.add(716L);
+        longs.add(2616L);
+        longs.add(2L);
+        longs.add(172L);
+        longs.add(95L);
+        longs.add(723L);
+        longs.add(307L);
+        longs.add(251L);
+        longs.add(628L);
+        longs.add(1232L);
         return longs;
     }
 
@@ -60,6 +59,14 @@ public class TasksLongs {
         return (long) medianValue[medianValue.length / 2];
     }
 
+    private long countLongsGreaterThan (List<Long> longs, long minimalLongValue) {
+
+        return longs.stream()
+                .filter(x -> x > minimalLongValue)
+                .count();
+
+    }
+
     public static void main(String[] args) {
         TasksLongs tasksLongs = new TasksLongs();
 
@@ -69,6 +76,7 @@ public class TasksLongs {
         System.out.println();
         System.out.println(tasksLongs.findMedianElement(tasksLongs.getSimpleList()));
         System.out.println();
+        System.out.println(tasksLongs.countLongsGreaterThan(tasksLongs.getSimpleList(), 2L));
     }
 
 }
