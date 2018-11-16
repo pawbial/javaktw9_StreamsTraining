@@ -13,6 +13,9 @@ public class Main {
         tasksInts.execute();
         System.out.println();
 
-        
+        TasksLists tasksLists = new TasksLists();
+        tasksLists.execute();
+
+
     }
 }
