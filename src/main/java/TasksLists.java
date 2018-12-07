@@ -19,22 +19,22 @@ public class TasksLists {
         return list;
     }
 
-        public void execute() {
-            List<String> removedDuplicates = removeDuplicates(getListOfString());
-            System.out.println("Removed duplicates: " + removedDuplicates);
+    public void execute() {
+        List<String> removedDuplicates = removeDuplicates(getListOfString());
+        System.out.println("Removed duplicates: " + removedDuplicates);
 
-            String concatenatedString = concatenateStrings(getListOfString());
-            System.out.println("Concatenated : " + concatenatedString);
+        String concatenatedString = concatenateStrings(getListOfString());
+        System.out.println("Concatenated : " + concatenatedString);
 
-            List<String> filteredByPrefix = filterByPrefix(getListOfString(), "Level-2");
-            System.out.println("Filtered by prefix: " + filteredByPrefix);
+        List<String> filteredByPrefix = filterByPrefix(getListOfString(), "Level-2");
+        System.out.println("Filtered by prefix: " + filteredByPrefix);
 
-            List<String> filteredBySuffix = filterBySuffix(getListOfString(), "String-7");
-            System.out.println("Filtered by suffix: " + filteredBySuffix);
+        List<String> filteredBySuffix = filterBySuffix(getListOfString(), "String-7");
+        System.out.println("Filtered by suffix: " + filteredBySuffix);
 
-            Map<Long, List<String>> groupedByLevelValue = groupByLevelValue(getListOfString());
-            System.out.println("Grouped by level value: " + groupedByLevelValue);
-        }
+        Map<Long, List<String>> groupedByLevelValue = groupByLevelValue(getListOfString());
+        System.out.println("Grouped by level value: " + groupedByLevelValue);
+    }
 
     private List<String> removeDuplicates(List<String> listOfString) {
         return listOfString.stream().distinct().collect(Collectors.toList());
@@ -54,6 +54,6 @@ public class TasksLists {
     }
 
     private Map<Long,List<String>> groupByLevelValue(List<String> listOfString) {
-       listOfString.stream().map(x -> Map <)
+        return listOfString.stream().filter(x -> x.startsWith("Level")).collect(Collectors.groupingBy(x -> Long.valueOf(x.charAt(6))));
     }
 }
