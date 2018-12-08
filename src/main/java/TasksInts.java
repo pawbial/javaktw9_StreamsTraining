@@ -47,10 +47,12 @@ public class TasksInts {
     }
 
     public Integer findMaxElement(int[] ints) {
+
         return Arrays.stream(ints).max().getAsInt();
     }
 
     public Integer findMinElement(int[] ints) {
+
         return Arrays.stream(ints).min().getAsInt();
     }
 
@@ -59,6 +61,7 @@ public class TasksInts {
     }
 
     public Integer sum(int[] ints) {
+
         return Arrays.stream(ints).sum();
     }
 

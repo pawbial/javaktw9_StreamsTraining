@@ -15,6 +15,9 @@ public class Main {
         System.out.println("TASKS LISTS");
         TasksLists tasksLists = new TasksLists();
         tasksLists.execute();
+        System.out.println("TASKS MAPS");
+        TasksMaps tasksMaps = new TasksMaps();
+        tasksMaps.execute();
 
 
     }
